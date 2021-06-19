@@ -1,0 +1,36 @@
+@import "./src/assets/style/library.scss";
+
+.containter{
+    @include container();
+    @include flex();
+    .box{
+        @include box();
+        width: 28%;
+        height: 70vh;
+        position:relative;
+        .info{
+            @include flex();
+            flex-direction: column;
+            height: 60vh;
+        }
+        button{
+            @include button();
+            position:absolute;
+            font-size: 1.5vw;
+            bottom:2vh;
+            left:25%;
+        }
+    }
+}
+.title{
+    @include flex();
+    width: 10%;
+    height: 5vh;
+    text-align: center;
+    color:white;
+    margin:2vh 0 2vh 5%;
+    background-color:$darkGray;
+    h1{
+        font-size:1.4vw;
+    }
+}

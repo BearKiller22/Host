@@ -1,0 +1,28 @@
+@mixin flex(){
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+@mixin container(){
+    width:90%;
+    height:80vh;
+    background:$darkGray;
+    margin-left: 5%;
+}
+@mixin box(){
+    width:30%;
+    height:20vh;
+    background:$gray;
+}
+@mixin button(){
+    width:50%;
+    height:6vh;
+    background:$orange;
+    color:white;
+    border:1px solid white;
+    font-family: bold;
+}
+$gray:#EAE7E7;
+$orange:#F6D48D;
+$darkOrange:#AA6D43;
+$darkGray:#C4C4C4;

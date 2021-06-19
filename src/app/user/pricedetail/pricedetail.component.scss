@@ -1,0 +1,92 @@
+@import "./src/assets/style/library.scss";
+.container{
+    @include container();
+    margin-top:5vh;
+    height: 100vh;
+    .info{
+        @include flex();
+        flex-direction: column;
+        justify-content: space-around;
+        float: left;
+        width: 45%;
+        margin:10vh 0 0 2.5%;
+        height: 65vh;
+        background-color: white;
+        .slideshow{
+            width:100%;
+            height:55vh;
+            float: left;
+            position: relative;
+            .content{
+                width:100%;
+                height:55vh;
+                .left, .right{
+                    width:10%;
+                    height:8vh; 
+                    position: absolute;
+                    background-color: $gray;
+                    right:0;
+                    top:22.5vh;
+                    .arrow{
+                        width:100%;
+                        height:8vh;
+                    }
+                }
+                .left{
+                    position: absolute;
+                    left: 0;
+                }
+
+                img{
+                    width:100%;
+                    height:50vh;
+                }
+            }
+        }
+        .imgView{
+            display: flex;
+            overflow:scroll;
+            overflow-y: hidden;
+            width: 100%;
+            height: 10vh;
+            img{
+                width: 20%;
+                margin-left:3%; 
+                float: left;
+                height: 8vh;
+            }
+        }
+    }
+    
+    .text{
+        @include flex();
+        flex-direction: column;
+        float: left;
+        width: 45%;
+        height: 65vh;
+        margin:10vh 0 0 5%;
+        position: relative;
+        .title{
+            position: absolute;
+            left:10%;
+            top:2vh;
+        }
+        .textinfo{
+            position: absolute;
+            width: 80%;
+            top:15vh;
+        }
+        .price{
+            position: absolute;
+            left:10%;
+            bottom:15vh;
+        }
+        button{
+            @include button();
+            position: absolute;
+            width: 30%;
+            bottom:0;
+            font-size:2vw;
+        }
+    }
+}

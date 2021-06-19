@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="info">
+        <div class="slideshow">
+            <div class="content">
+                <button class="left" (click)="changeSlide(-1)"><img class="arrow" src="https://icons-for-free.com/iconfiles/png/512/arrow+left+chevron+chevronleft+left+left+icon+icon-1320185731545502691.png"></button>
+                <img [src]="slideImage" alt="">
+                <button class="right" (click)="changeSlide(1)"><img class="arrow" src="https://cdn.iconscout.com/icon/free/png-256/right-arrow-1438234-1216195.png"></button>
+            </div>
+        </div>
+        <div class="imgView" >
+            <img *ngFor="let item of SlideShowArray" [src]="item.img" alt="prod.image" (click)="changeImage(item.id)">
+        </div>
+    </div>
+    
+    <div class="text">
+        <div class="title">
+            <h1>პაკეტის სახელი</h1>
+        </div>
+
+
+        <div class="textinfo">
+            <p>{{output.description}}</p>
+        </div>
+        
+        <div class="price">
+            <h1>Price: {{output.price}}$</h1>
+        </div>  
+        <button [routerLink]="['/contact']">Contact</button>
+    </div>
+
+</div>

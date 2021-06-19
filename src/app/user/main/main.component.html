@@ -1,0 +1,60 @@
+<div class="slideshow">
+    <div class="content">
+        <button (click)="changeSlide(-1)"><img class="arrow" src="https://icons-for-free.com/iconfiles/png/512/arrow+left+chevron+chevronleft+left+left+icon+icon-1320185731545502691.png"></button>
+        <img [src]="slideImage" alt="">
+        <button (click)="changeSlide(1)"><img class="arrow" src="https://cdn.iconscout.com/icon/free/png-256/right-arrow-1438234-1216195.png"></button>
+    </div>
+</div>
+
+
+
+<div class="ourProd">
+    <h1>ჩვენი პროდუქტი</h1>
+    <div class="boxes" >
+        <div class="box" *ngFor="let item of test"> 
+            <img [src]="item.img" alt="">
+            <button [routerLink]="['/productdetail', item.id]">მეტი</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="ourOffer">
+    <h1>ჩვენ გთავაზობთ</h1>
+    <div class="boxes">
+
+        <div class="box">
+            <div class="title"><p>საუკეთესო პროდუქტი</p></div>
+            <p>ჩვენ გთავაზობთ პროდუქტს,რომელიც არის ხარისხიანი,ჩვენი მომსახურებით ყველა კმაყოფილია.</p>
+        </div>
+
+        <div class="box">
+            <div class="title"><p>საუკეთესო ხარისხი</p></div>
+            <p>გვაქვს ძალიან კარგი,ხარისხიანი კამერები და სტაბილიზატორები,მონტაჟში მონაწილეობს რამდენიმე ადამიანი, პროდუქტი იქმნება ხარისხიანი.</p>
+        </div>
+
+        <div class="box">
+            <div class="title"><p>მოკლე დრო</p></div>
+            <p>ჩვენს საქმეს ვაკეთებთ უმოკლეს დროში,მაგრამ ეს არ ხდება ხარისხის ხარჯზე, საუკეთესო პროდუქტი უსწრაფეს დროში.</p>
+        </div>
+        
+    </div>
+</div>
+
+
+<div class="contact">   
+    <h1>კონტაქტი</h1>
+    <input type="text" placeholder="სახელი და გვარი">
+    <input type="text" placeholder="ელექტრონული ფოსტა">
+    <textarea type="text" placeholder="მესიჯი"></textarea>
+    <button>გაგზავნა</button>
+</div>
+
+<div class="clientSlideshow">
+    <h1 class="clients">კლიენტები</h1>
+    <div class="content" >
+        <button (click)="changeClientSlide(-1)"><img class="arrow" src="https://icons-for-free.com/iconfiles/png/512/arrow+left+chevron+chevronleft+left+left+icon+icon-1320185731545502691.png"></button>
+        <img *ngFor="let item of imgArray" [src]="item" alt="">
+        <button (click)="changeClientSlide(1)"><img class="arrow" src="https://cdn.iconscout.com/icon/free/png-256/right-arrow-1438234-1216195.png"></button>
+    </div>
+</div>
