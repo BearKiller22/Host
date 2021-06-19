@@ -1,0 +1,44 @@
+@import "./src/assets/style/library.scss";
+
+.title{
+    @include flex();
+    width: 10%;
+    height: 5vh;
+    text-align: center;
+    color:white;
+    margin:2vh 0 2vh 5%;
+    background-color:$darkGray;
+    h1{
+        font-size:1.4vw;
+    }
+}
+
+.containter{
+    @include container();
+    .box{
+        @include box();
+        width: 45%;
+        height: 30vh;
+        float: left;
+        position:relative;
+        margin:7vh 2.5% 0 2.5%;
+        p{
+            top:0;
+            left:0;
+            width: 30%;
+            height: 4vh;
+            background-color:black;
+            color:white;
+            position:absolute;
+            text-align: center;
+            font-size:1.6vw;
+        }
+        h1{
+            margin:10vh 0 0 2%;
+            color:white;
+            font-size:1.3vw;
+            color:black;
+        }
+    }
+}
+

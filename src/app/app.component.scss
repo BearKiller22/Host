@@ -1,0 +1,113 @@
+@import "./src/assets/style/library.scss";
+
+.header{
+    @include flex();
+    justify-content:space-between;
+    width:100%;
+    height:8vh;
+    background:$orange;
+    user-select:none;
+    .logo{
+        @include flex();
+        width:12%;
+        height:8vh;
+        margin-left:5%;
+        img{
+            width:auto;
+            height:6vh;
+            cursor:pointer;
+        }
+        p{
+            font-size:24px;
+            color:white;
+        }
+        .vertical{
+            height:6vh;
+            width:5px;
+            background:$darkOrange;
+        }
+    }
+    .menu{
+        @include flex();
+        width:45%;
+        grid-template:2 5;
+        p{
+            color:white;
+            font-size:18px;
+        }
+        .active{
+            color:$darkOrange;
+        }
+    }
+}
+
+.content{
+    min-height:72vh;
+    height:auto;
+    width:100%;
+}
+
+.footer{
+    margin-top:20vh;
+    width:100%;
+    height:30vh;
+    background:$orange;
+    .contact{
+        @include flex();
+        float:left;
+        width:50%;
+        height:25vh;
+        position:relative;
+        border-bottom:1px solid white;
+        h1{
+            position:absolute;
+            top:0;
+        }
+        .numbMail,.others{
+            color:white;
+            @include flex();
+            flex-direction:column;
+            width:50%;
+        }
+        .others{
+            @include flex();
+            flex-direction:column;
+            justify-content:space-between;
+            height:12vh;
+        }
+    }
+    .social{
+        @include flex();
+        float:left;
+        width:49.9%;
+        height:25vh;
+        position:relative;
+        border-bottom:1px solid white;
+        border-left:1px solid white;
+        h1{
+            position:absolute;
+            top:0;
+        }
+        .socialLinks{
+            @include flex();
+            width:30%;
+            height:auto;
+        }
+        img{
+            width:10%;
+            height:auto;
+            cursor:pointer;
+        }
+        .vertical{
+            height:4vh;
+            width:1px;
+            background:white;
+        }
+    }
+    .rights{
+        float:left;
+        width:100%;
+        height:2vh;
+        text-align:right;
+    }
+}

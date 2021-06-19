@@ -1,0 +1,10 @@
+<div class="title">
+    <h1>პროდუქტები</h1>
+</div>
+
+<div class="containter">
+    <div class="box" *ngFor="let item of test">
+        <img [src]="item.img" alt="">
+        <button [routerLink]="['/productdetail', item.id]">მეტი</button>
+    </div>
+</div>

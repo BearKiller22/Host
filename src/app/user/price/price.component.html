@@ -1,0 +1,36 @@
+<div class="title">
+    <h1>პაკეტები</h1>
+</div>
+
+<div class="containter">
+    <div class="box" *ngFor="let item of packet">
+        <div class="info">
+            <p *ngFor="let incld of item.include">{{incld}}</p>
+        </div>
+        <button [routerLink]="['/pricedetail', item.id]">მეტის ნახვა</button>
+    </div>z
+
+    <!-- <div class="box">
+        <div class="info">
+            <p>ვიდეოს გადაღება</p>
+            <p>ფოტოს გადაღება</p>
+            <p>დამონტაჟება</p>
+            <p>სცენარის დაწერა</p>
+            <p>100 ლარი</p>
+        </div>
+        <button [routerLink]="['/pricedetail', item.id]">მეტის ნახვა</button>
+    </div>
+
+    <div class="box">
+        <div class="info">
+            <p>ვიდეოს გადაღება</p>
+            <p>ფოტოს გადაღება</p>
+            <p>დამონტაჟება</p>
+            <p>სცენარის დაწერა</p>
+            <p>დრონის მომსახურება</p>
+            <p>100 ლარი</p>
+        </div>
+        <button [routerLink]="['/pricedetail', item.id]">მეტის ნახვა</button>
+    </div>
+     -->
+</div>

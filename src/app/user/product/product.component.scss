@@ -1,0 +1,48 @@
+@import "./src/assets/style/library.scss";
+
+.title{
+    @include flex();
+    width: 10%;
+    height: 5vh;
+    text-align: center;
+    color:white;
+    margin:2vh 0 2vh 5%;
+    background-color:$darkGray;
+    h1{
+        font-size:1.4vw;
+    }
+}
+.containter{
+    @include container();
+    p{
+        top:0;
+        left:0;
+        width: 30%;
+        height: 4vh;
+        color:white;
+        font-size:2vw;
+        position:absolute;
+        text-align: center;
+        background-color: black;
+    }
+    .box{
+        @include box();
+        @include flex();
+        width: 20%;
+        float: left;
+        height: 30vh;
+        position: relative;
+        margin:7vh 2.5% 0 2.5%;
+        flex-direction: column;
+        button{
+            @include button();  
+            position: absolute;
+            bottom:2vh;
+            border:1px solid white;
+        }
+        img{
+            width: 100%;
+            height: inherit;
+        }
+    }
+}
